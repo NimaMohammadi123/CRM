@@ -1,5 +1,40 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Register</h1>
+<div class="col-md-6 offset-md-3">
+
+    <h1>Register</h1>
+    <br>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">username</label>
+            <input type="text" class="form-control"  name="username">
+          
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password </label>
+            <input type="password" class="form-control" name="password1" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password confirm</label>
+            <input type="password" class="form-control" name="password2" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">firstname</label>
+            <input type="text" class="form-control" name="first_name" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">lastname</label>
+            <input type="text" class="form-control" name="last_name" >
+          </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">email</label>
+            <input type="email" class="form-control"  name="email">
+          </div>
+        <button type="submit" class="btn btn-primary">register</button>
+    </form>
+</div>
+
+
 {% endblock content %}
